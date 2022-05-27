@@ -1,38 +1,118 @@
-.App {
-  text-align: center;
-}
+@import "~bootstrap/dist/css/bootstrap.min.css";
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.App-container {
+  background-color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.layout {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-main {
+  background-color: white;
+  flex-grow: 1;
+  display: flex;
+  overflow-x: scroll;
+  border-top-left-radius: 20px;
+}
+
+.content-wrap {
+  padding: 15px;
+}
+
+.header {
+  min-height: 40px;
+  background: darkcyan;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar {
+  justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.board-column-wrap {
+  box-sizing: border-box;
+  display: inline-block;
+  height: 80vh;
+  margin: 0 4px;
+  vertical-align: top;
+  white-space: nowrap;
+  min-width: 18%;
+}
+
+.board-column-content {
+  background-color: #ebecf0;
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+  position: relative;
+  white-space: normal;
+  width: 100%!important;
+}
+
+.cards-container {
+  flex: 1 1 auto;
+  margin: 0 4px;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 0 4px;
+  z-index: 1;
+}
+
+.column-card {
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(128, 128, 128, 0.51);
+  cursor: pointer;
+  display: block;
+  margin-bottom: 8px;
+  max-width: 300px;
+  min-height: 80px;
+  position: relative;
+  text-decoration: none;
+  z-index: 0;
+}
+
+.column-card:hover {
+  background-color: lightcyan;
+}
+
+.priority-badge-high {
+  min-width: 50px;
+  max-width: 60px;
+  color: #fff;
+  background-color: #dc3545;
+}
+
+.priority-badge-medium {
+  min-width: 50px;
+  max-width: 60px;
+  color: #212529;
+  background-color: #ffc107;
+}
+
+.priority-badge-low {
+  min-width: 50px;
+  max-width: 60px;
+  color: #fff;
+  background-color: #17a2b8;
+}
+
+.add-card:hover {
+  background-color: lightgrey;
+  cursor: pointer;
+}
+
+.add-column-btn-container {
+  min-width: 18%;
+  max-width: 18%!important;
+  max-height: 80px;
 }
