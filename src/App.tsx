@@ -41,14 +41,14 @@ const App = observer((props: IStore) => {
 
                     {!store.showColumnComposer ?
                         <Button
-                            className={'ml-1'}
+                            className={'ml'}
                             variant={'outline-info'}
                             onClick={store.toggleColumnComposer}
                         >
                             {'+ Add new list'}
                         </Button>
                         :
-                        <div className={'column-card ml-1 p-2'}>
+                        <div className={'column-card p-2'}>
                             <Form.Control
                                 size={'sm'}
                                 as={'textarea'}
@@ -57,7 +57,7 @@ const App = observer((props: IStore) => {
                                 placeholder="Enter a title for this list..."/>
                             <div className='d-flex justify-content-center pt-2'>
                                 <Button
-                                    className='btn-sm btn-info mr-2'
+                                    className='btn-sm btn-info me-2'
                                     onClick={() => {
                                         if (!store.columnComposerTitle.trim().length) {
                                             return;

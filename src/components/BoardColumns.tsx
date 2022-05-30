@@ -32,10 +32,10 @@ export interface IColumnProps {
 const ColumnItem = observer(({column, store, cardStore}: IColumnProps) => {
     return <div key={column.id} className='board-column-wrap'>
         <div className='board-column-content'>
-            <div className='d-flex justify-content-between align-items-center p-2 font-weight-bold'>
-                        <span>
-                            {column.name}
-                        </span>
+            <div className='d-flex justify-content-between align-items-center p-2'>
+                <span className={'fw-bold'}>
+                    {column.name}
+                </span>
                 <Trash3 size={14} onClick={() => store.deleteColumn(column.id)}/>
             </div>
             <Droppable droppableId={column.id}>
@@ -71,7 +71,7 @@ const ColumnItem = observer(({column, store, cardStore}: IColumnProps) => {
                     placeholder="Enter a title for this card..."/>
                 <div className='d-flex justify-content-center pt-2'>
                     <Button
-                        className='btn-sm btn-info mr-2'
+                        className='btn-sm btn-info me-2'
                         onClick={() => {
                             if (!cardStore.cardComposerTitle.trim().length) {
                                 return;
