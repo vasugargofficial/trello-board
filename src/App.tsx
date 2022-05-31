@@ -26,7 +26,7 @@ const App = observer((props: IStore) => {
                     const srcIndex = result.source.index;
                     const desIndex = result.destination?.index;
 
-                    if (desIndex && desColumnId) {
+                    if (typeof desIndex === "number" && desColumnId) {
                         const card = store.columns.find(column => column.id === srcColumnId)?.cards[srcIndex];
                         if (card) {
                             store.columns.find(column => column.id === srcColumnId)?.cards.splice(srcIndex, 1);

@@ -48,8 +48,5 @@
   },
   "devDependencies": {
     "@types/react-beautiful-dnd": "^13.1.2"
-  },
-  "overrides": {
-    "autoprefixer": "10.4.5"
   }
 }
